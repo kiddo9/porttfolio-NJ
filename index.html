@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+</head>
+<body class="h-full">
+    <nav class="w-screen sticky top-0 bg-white py-2">
+        <div class="hidden md:flex justify-between  desktop items-center px-10" style="padding-top: 1rem;">
+            <h1 style="font-weight: 700;">JENNIFER</h1>
+
+            <ul class="flex w-52 details gap-10">
+                <li><a href="#about">About me</a> </li>
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Contact me</li>
+            </ul>
+
+            <button style="width: 15rem; border-radius: 20px; display: flex; justify-content: center; padding: 0.5rem; background: black; color: white; gap: 10px;">
+                Resume<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" style="width: 20px; height: 20px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+            </button>
+        </div>
+
+        <div class="md:hidden justify-between flex mx-3">
+            <h1 class="font-xl" style="font-weight: 700;">JENNIFER</h1>
+
+            <div class="fixed bg-black mobile h-full top-0" style="width: 20rem;" id="MobileNav">
+                <ul class="">
+                    <li><a href="#about">About me</a> </li>
+                    <li>Skills</li>
+                    <li>Projects</li>
+                    <li>Contact me</li>
+                </ul>
+                <button class="btn">
+                    Resume<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" style="width: 20px; height: 20px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                      </svg>
+                      
+                </button>
+
+                
+            </div>
+             <button class="hidden" id="CloseMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" style="width: 30px; height: 30px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>                  
+            </button>
+            <button id="ToggleMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="" style="width: 30px; height: 30px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>                                   
+            </button>
+           
+        </div>
+    </nav> 
+
+
+    <main>
+        <div class="flex flex-col mt-10 gap-10 md:flex-row lg:justify-evenly md:items-center px-10 md:px-2 md:justify-between">
+            <h1 class="text-2xl" style="font-size: 2rem; font-weight: 800;">Hello, I am JENNIFER,
+                <p style="font-size: 1.3rem; font-weight: 300;">
+                    Full Stack Web Developer,<br/>
+                    Front-end and Backend Developer,<br/>
+                    Mobile Application Developer
+                </p> 
+                
+            </h1>
+
+            <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg" class="w-[30rem]" alt="">
+      
+        </div>
+
+
+        <div class="px-10" id="about">
+            <h1 class="text-xl font-bold">About</h1>
+
+            <p>
+                Hello, I am Jennifer, a dedicated Full Stack Web Developer with a passion for creating seamless and efficient digital experiences. With expertise in both front-end and back-end development, I am skilled in building interactive and visually appealing user interfaces, while ensuring robust and scalable backend systems.<br/><br/>
+
+                On the front-end side, I specialize in technologies such as HTML, CSS, JavaScript, and frameworks like React, Angular, or Vue.js to bring modern web applications to life. I focus on crafting intuitive, responsive, and accessible designs that enhance user experiences across all devices.<br/><br/>
+                
+                In backend development, I am proficient in using Node.js, PHP, Python, and other server-side technologies, alongside databases like PostgreSQL, MongoDB, and MySQL. My goal is to develop efficient APIs and services that power complex, data-driven applications with high performance and security in mind.<br/><br/>
+                
+                As a mobile application developer, I also work on creating cross-platform apps using frameworks such as React Native and Flutter, allowing me to bring ideas to both iOS and Android devices with a consistent experience across platforms.<br/><br/>
+                
+                Whether it's building from scratch, improving an existing project, or integrating new functionalities, I am driven by solving complex problems and delivering high-quality solutions that make a difference. My diverse skill set allows me to handle all aspects of web and mobile development, ensuring a seamless connection between the frontend and backend.                 
+            </p>
+        </div>
+             
+        <div class="px-10 mt-10">
+            <h1 class="text-xl font-bold">Skills</h1>
+
+            <div class="grid grid-cols-2 md:grid-cols-6 2xl:grid-cols-10 gap-2 " id="SkillsList">
+                
+            </div>
+        </div>
+
+        
+      </main>
+
+    <script src="/src/js/main.js"></script>
+</body>
+</html>
