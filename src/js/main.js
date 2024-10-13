@@ -3,6 +3,16 @@ const CloseButton = document.getElementById('CloseMenu')
 let MenuButton = document.getElementById('ToggleMenu')
 const List = document.getElementById('SkillsList')
 
+const exitM = document.querySelectorAll('#exitM')
+exitM.forEach((exit) => {
+    exit.addEventListener('click', () => {
+        Moblienav.style.transform = '';
+        Moblienav.style.transition = '1s ease'
+        CloseButton.style.display = ''
+        MenuButton.style.display = ''
+    })
+})
+
 MenuButton.addEventListener('click', ToggleNav)
 CloseButton.addEventListener('click', CloseNav)
 
