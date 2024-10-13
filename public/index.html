@@ -5,9 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/src/output.css" rel="stylesheet">
-    <link href="/main.css" rel="stylesheet">
+    <link href="/" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.details{
+    gap: 20px;
+    width: 25rem;
+    justify-content: space-around;
+}
+
+.mobile{
+    background: black;
+    color: grey;
+    transform: translateX(-105%);
+}
+
+.mobile ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 11rem;
+    gap: 50px;
+    padding-top: 1rem;
+}
+
+.mobile ul li, .desktop ul li{
+    cursor: pointer;
+}
+
+.mobile ul li, .desktop ul li:hover{
+    color: white;
+    transform: scale(1.2);
+    transition: 1s ease-in-out;
+}
+
+.desktop ul li:hover{
+    color:black
+}
+
+.mobile .btn{
+    width: 90%;
+    margin-left: 1.2rem;
+    margin-top: 10rem;
+    padding: 0.5rem;
+    background: grey;
+    border-radius: 10px;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    </style>
 </head>
+
 <body class="h-full">
     <nav class="w-screen sticky top-0 bg-white py-2">
         <div class="hidden md:flex justify-between  desktop items-center px-10" style="padding-top: 1rem;">
@@ -106,33 +167,33 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-2 xl:grid-cols-3">
                 <div>
-                    <img src="/WhatsApp Image 2024-10-11 at 05.51.34 (1).jpeg" alt="">
+                    <img src="/public/WhatsApp Image 2024-10-11 at 05.51.34 (1).jpeg" alt="">
                 </div>
 
                 <div>
-                    <img src="/WhatsApp Image 2024-10-11 at 05.51.34.jpeg" alt="">
+                    <img src="/public/WhatsApp Image 2024-10-11 at 05.51.34.jpeg" alt="">
                 </div>
 
                 <div>
                     <video autoplay>
-                         <source src="/WhatsApp Video 2024-10-11 at 05.51.33.mp4">
+                         <source src="/public/WhatsApp Video 2024-10-11 at 05.51.33.mp4">
                     </video>
                 </div>
 
                 <div>
-                    <video autoplay src="/WhatsApp Video 2024-10-11 at 05.52.08.mp4"></video>
+                    <video autoplay src="/public/WhatsApp Video 2024-10-11 at 05.52.08.mp4"></video>
                 </div>
 
                 <div>
-                    <img src="/WhatsApp Image 2024-10-12 at 17.49.20.jpeg" alt="">
+                    <img src="/public/WhatsApp Image 2024-10-12 at 17.49.20.jpeg" alt="">
                 </div>
 
                 <div>
-                    <img src="/WhatsApp Image 2024-10-12 at 17.49.21.jpeg" alt="">
+                    <img src="/public/WhatsApp Image 2024-10-12 at 17.49.21.jpeg" alt="">
                 </div>
 
                 <div>
-                    <video src="/WhatsApp Video 2024-10-12 at 17.49.26.mp4"></video>
+                    <video src="/public/WhatsApp Video 2024-10-12 at 17.49.26.mp4"></video>
                 </div>
             </div>
         </div>
@@ -178,6 +239,128 @@
         </footer>
       </main>
 
-    <script src="/src/js/main.js"></script>
+    <script>const Moblienav = document.getElementById('MobileNav');
+        const CloseButton = document.getElementById('CloseMenu')
+        let MenuButton = document.getElementById('ToggleMenu')
+        const List = document.getElementById('SkillsList')
+        
+        const exitM = document.querySelectorAll('#exitM')
+        exitM.forEach((exit) => {
+            exit.addEventListener('click', () => {
+                Moblienav.style.transform = '';
+                Moblienav.style.transition = '1s ease'
+                CloseButton.style.display = ''
+                MenuButton.style.display = ''
+            })
+        })
+        
+        MenuButton.addEventListener('click', ToggleNav)
+        CloseButton.addEventListener('click', CloseNav)
+        
+        function ToggleNav(){
+            Moblienav.style.transform = 'translateX(-5%)';
+            Moblienav.style.transition = '1s ease'
+            CloseButton.style.display = 'block'
+            MenuButton.style.display = 'none'
+        }
+        
+        function CloseNav(){
+            Moblienav.style.transform = '';
+            Moblienav.style.transition = '1s ease'
+            CloseButton.style.display = ''
+            MenuButton.style.display = ''
+        }
+        
+        
+        let SkillsList = [
+            {
+                name: "HTML5",
+                type: 'base'
+            },
+            {
+                name: "CSS3",
+                type: 'base'
+            },
+            {
+                name: 'Tailwinds',
+                type: 'Framework'
+            },
+            {
+                name: 'JavaScript',
+                type: 'base',
+            },
+            {
+                name: 'React',
+                type: 'Framework'
+            },
+            {
+                name: 'React Native',
+                type: 'Framework'
+            },
+            {
+                name: 'Vue',
+                type: 'Framework'
+            },
+            {
+                name: 'Angular',
+                type: 'Framework'
+            },
+            {
+                name: 'PHP',
+                type: 'base'
+            },
+            {
+                name: 'Laravel',
+                type: 'Framework'
+            },
+            {
+                name: 'node js',
+                type: 'base'
+            },
+            {
+                name: 'express js',
+                type: 'Framework'
+            },
+            {
+                name: 'MySQL',
+                type: 'database',
+                category: 'sql'
+            },
+            {
+                name: 'postgres',
+                type: 'database',
+                category: 'sql'
+            },
+            {
+                name: 'mongodb',
+                type: 'database',
+                category: 'no-sql'
+            },
+            {
+                name: 'Python'
+            },
+            {
+                name: 'Go lang'
+            },
+            {
+                name: 'c, c++, c#'
+            },
+            {
+                name: 'API integrations'
+            },
+        ]
+        
+        List.innerHTML = SkillsList.map((skill) => {
+            return `
+              <div class="bg-gray-300 text-center py-2 rounded-lg">${skill.name}</div>
+            `;
+        }).join('');
+        
+        
+        ;
+            
+        
+        
+        </script>
 </body>
 </html>
